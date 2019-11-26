@@ -1,10 +1,11 @@
+<!--==========TEMPLATE==========-->
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
-
+<!--==========SCRIPT==========-->
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -15,7 +16,7 @@ export default {
   }
 }
 </script>
-
+<!--==========STYLE==========-->
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

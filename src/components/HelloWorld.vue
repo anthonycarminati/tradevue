@@ -1,3 +1,4 @@
+<!--==========TEMPLATE==========-->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -29,7 +30,7 @@
     </ul>
   </div>
 </template>
-
+<!--==========SCRIPT==========-->
 <script>
 export default {
   name: 'HelloWorld',
@@ -38,8 +39,7 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!--==========STYLE==========-->
 <style scoped>
 h3 {
   margin: 40px 0 0;
