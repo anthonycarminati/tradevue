@@ -20,16 +20,16 @@ export default {
         url: "/home"
       },
       {
+        label: "Open Positions",
+        url: "/open-positions"
+      },
+      {
         label: "P&L",
         url: "/profit-and-loss"
       },
       {
         label: "Cash Flow",
         url: "/cash-flow"
-      },
-      {
-        label: "Open Positions",
-        url: "/open-positions"
       }
     ]
   })

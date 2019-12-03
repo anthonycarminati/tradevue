@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
-    This is the homepage
+  <div>
+    <h1>Home</h1>
+    <v-divider />
   </div>
 </template>
 
@@ -8,6 +9,9 @@
 // @ is an alias to /src
 
 export default {
-  name: "home"
+  name: "Home",
+  data: () => ({
+    //
+  })
 };
 </script>

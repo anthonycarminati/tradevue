@@ -6,22 +6,22 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/home",
-    name: "home",
+    name: "Home",
     component: () => import("../views/Home.vue")
   },
   {
     path: "/profit-and-loss",
-    name: "profit-and-loss",
+    name: "ProfitAndLoss",
     component: () => import("../views/ProfitAndLoss.vue")
   },
   {
     path: "/cash-flow",
-    name: "cash-flow",
+    name: "CashFlow",
     component: () => import("../views/CashFlow.vue")
   },
   {
     path: "/open-positions",
-    name: "open-positions",
+    name: "OpenPositions",
     component: () => import("../views/OpenPositions.vue")
   },
   {
