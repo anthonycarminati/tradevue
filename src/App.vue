@@ -1,17 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <v-toolbar-title>Tradevue</v-toolbar-title>
-      <v-spacer />
-      <v-btn
-        v-for="link in links"
-        :key="link.label"
-        text
-        rounded
-        :to="link.url"
-        >{{ link.label }}</v-btn
-      >
-    </v-app-bar>
+    <TheNavBar />
     <v-content>
       <router-view />
     </v-content>
@@ -19,27 +8,14 @@
 </template>
 
 <script>
+import TheNavBar from "./components/TheNavBar";
 export default {
   name: "App",
   data: () => ({
-    links: [
-      {
-        label: "Home",
-        url: "/"
-      },
-      {
-        label: "Login",
-        url: "/login"
-      },
-      {
-        label: "Dashboard",
-        url: "/dashboard"
-      },
-      {
-        label: "Signup",
-        url: "/signup"
-      }
-    ]
-  })
+    //
+  }),
+  components: {
+    TheNavBar
+  }
 };
 </script>
