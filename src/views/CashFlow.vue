@@ -1,12 +1,15 @@
 <template>
   <div>
-    <h1>Cash Flow</h1>
-    <v-divider />
-    <ul>
-      <li v-for="transaction in ibkrData.cash" :key="transaction.transactionID">
-        {{ transaction }}
-      </li>
-    </ul>
+    <v-container>
+      <v-data-table
+        :headers="headers"
+        :items="ibkrData.cash"
+        class="elevation-1 ma-5"
+        multi-sort="true"
+        :sort-by.sync="sortBy.name"
+        items-per-page="-1"
+      ></v-data-table>
+    </v-container>
   </div>
 </template>
 
@@ -16,7 +19,14 @@ import ibkrData from "../assets/ibkrData.js";
 export default {
   name: "CashFlow",
   data: () => ({
-    ibkrData
+    ibkrData,
+    sortBy: { name: "Date/Time" },
+    headers: [
+      { text: "Date", sortable: true, value: "Date/Time" },
+      { text: "Description", sortable: false, value: "Description" },
+      { text: "Amount", sortable: true, value: "Amount" },
+      { text: "Type", value: "Type", filterable: true }
+    ]
   })
 };
 </script>

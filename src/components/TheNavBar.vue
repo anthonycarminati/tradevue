@@ -1,6 +1,5 @@
 <template>
   <v-app-bar app color="primary" dark>
-    <router-link :to="{ name: 'Home' }">Home</router-link>
     <v-toolbar-title>
       Tradevue
     </v-toolbar-title>
