@@ -3,23 +3,20 @@
     <h1 class="centered">Open Positions</h1>
     <v-divider />
     <ul>
-      <li v-for="pos in positions" :key="pos.symbol">{{ pos.symbol }}</li>
+      <li v-for="position in ibkrData.pos" :key="position.symbol">
+        {{ position }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
+import ibkrData from "../assets/ibkrData.js";
+
 export default {
   name: "OpenPositions",
   data: () => ({
-    positions: [
-      {
-        symbol: "aapl"
-      },
-      {
-        symbol: "chwy"
-      }
-    ]
+    ibkrData
   })
 };
 </script>

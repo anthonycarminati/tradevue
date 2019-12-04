@@ -1,10 +1,17 @@
 <template>
   <v-app-bar app color="primary" dark>
+    <router-link :to="{ name: 'Home' }">Home</router-link>
     <v-toolbar-title>
       Tradevue
     </v-toolbar-title>
     <v-spacer />
-    <v-btn v-for="link in links" :key="link.label" text rounded :to="link.url">
+    <v-btn
+      v-for="link in links"
+      :key="link.label"
+      text
+      rounded
+      :to="{ name: link.name }"
+    >
       {{ link.label }}
     </v-btn>
   </v-app-bar>
@@ -17,19 +24,19 @@ export default {
     links: [
       {
         label: "Home",
-        url: "/home"
+        name: "Home"
       },
       {
         label: "Open Positions",
-        url: "/open-positions"
+        name: "OpenPositions"
       },
       {
         label: "P&L",
-        url: "/profit-and-loss"
+        name: "ProfitAndLoss"
       },
       {
         label: "Cash Flow",
-        url: "/cash-flow"
+        name: "CashFlow"
       }
     ]
   })
