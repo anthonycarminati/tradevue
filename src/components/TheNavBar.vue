@@ -22,10 +22,6 @@ export default {
   data: () => ({
     links: [
       {
-        label: "Home",
-        name: "Home"
-      },
-      {
         label: "Open Positions",
         name: "OpenPositions"
       },

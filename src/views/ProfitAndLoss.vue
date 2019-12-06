@@ -6,13 +6,20 @@
           v-for="security in ibkrData.pnl"
           :key="security.Symbol"
           class="mx-auto mb-5"
-          min-width="320"
-          max-width="30%"
+          min-width="840"
+          max-width="90%"
         >
-          <v-list></v-list>
-          <v-card-title>{{ security.Symbol }}</v-card-title>
-          <v-card-subtitle>{{ security.AssetClass }}</v-card-subtitle>
-          <v-card-text>{{ security.Description }}</v-card-text>
+          <v-list-item three-line>
+            <v-list-item-content>
+              <v-list-item-title class="display-2 mb-1">
+                {{ security.Symbol }}
+              </v-list-item-title>
+              <v-list-item-subtitle class="py-1 subtitle-2">
+                {{ security.Description }}
+              </v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-divider class="my-2" />
         </v-card>
       </div>
     </v-container>

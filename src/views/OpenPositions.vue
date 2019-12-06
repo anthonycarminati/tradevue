@@ -4,7 +4,7 @@
       <div class="flex-wrap d-flex">
         <v-card
           v-for="position in ibkrData.pos"
-          :key="position.symbol"
+          :key="position.Symbol"
           class="mx-auto mb-5"
           min-width="840"
           max-width="90%"
@@ -25,6 +25,7 @@
               </v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
+          <v-divider class="my-2" />
           <v-card-text>
             <v-row class="title-row" dense>
               <v-col cols="2">Quantity</v-col>

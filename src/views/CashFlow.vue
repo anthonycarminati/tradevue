@@ -5,8 +5,9 @@
         :headers="headers"
         :items="ibkrData.cash"
         class="elevation-1 ma-5"
-        multi-sort="true"
+        multi-sort
         :sort-by.sync="sortBy.name"
+        :sort-desc="true"
         items-per-page="-1"
       ></v-data-table>
     </v-container>

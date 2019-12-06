@@ -5,9 +5,13 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/home",
-    name: "Home",
-    component: () => import("../views/Home.vue")
+    path: "/",
+    redirect: "/open-positions"
+  },
+  {
+    path: "/open-positions",
+    name: "OpenPositions",
+    component: () => import("../views/OpenPositions.vue")
   },
   {
     path: "/profit-and-loss",
@@ -19,14 +23,10 @@ const routes = [
     name: "CashFlow",
     component: () => import("../views/CashFlow.vue")
   },
-  {
-    path: "/open-positions",
-    name: "OpenPositions",
-    component: () => import("../views/OpenPositions.vue")
-  },
+
   {
     path: "*",
-    component: () => import("../views/Home.vue")
+    redirect: "/open-positions"
   }
 ];
 
