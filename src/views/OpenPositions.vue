@@ -37,11 +37,21 @@
             </v-row>
             <v-row dense>
               <v-col cols="2">{{ position.Quantity }}</v-col>
-              <v-col cols="2">{{ position.MarkPrice }}</v-col>
-              <v-col cols="2">{{ position.PositionValue }}</v-col>
-              <v-col cols="2">{{ position.OpenPrice }}</v-col>
-              <v-col cols="2">{{ position.CostBasisPrice }}</v-col>
-              <v-col cols="2">{{ position.CostBasisMoney }}</v-col>
+              <v-col cols="2">
+                {{ formatPrice(position.MarkPrice) }}
+              </v-col>
+              <v-col cols="2">
+                {{ formatPrice(position.PositionValue) }}
+              </v-col>
+              <v-col cols="2">
+                {{ formatPrice(position.OpenPrice) }}
+              </v-col>
+              <v-col cols="2">
+                {{ formatPrice(position.CostBasisPrice) }}
+              </v-col>
+              <v-col cols="2">
+                {{ formatPrice(position.CostBasisMoney) }}
+              </v-col>
             </v-row>
           </v-card-text>
         </v-card>
@@ -53,6 +63,7 @@
 <script>
 import colors from "vuetify/lib/util/colors";
 import ibkrData from "../assets/ibkrData.js";
+import { formatPrice } from "../utils/formatters";
 // import { mapGetters } from "vuex";
 // import {
 //   colorByAmount,
@@ -71,7 +82,8 @@ export default {
       return {
         color: positionSide === "Long" ? blue.base : deepOrange.base
       };
-    }
+    },
+    formatPrice
   }
 };
 </script>

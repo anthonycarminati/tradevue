@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark>
+  <v-app-bar app color="blue-grey" dark>
     <v-toolbar-title>
       Tradevue
     </v-toolbar-title>
